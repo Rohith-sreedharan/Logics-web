@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta charset="utf-8">
+		<title>Logicism For Class 12</title>
+<!-- Logicism, Intuitionism and Formalism
+Rohith SV -->
+<style>
+        .container {
+            margin: 100px 400px;
+        }
+  
+        .no-box {
+            padding-left: 30px;
+            font-size: 60px;
+        }
+  
+        .btn {
+            background-color: rgb(179, 179, 179);
+        }
+  
+        .btn:hover {
+            color: white;
+            background-color: green;
+        }
+    </style>
+</head>
+  
+<body>
+    <div class="container">
+        <div class="no-box">
+            <span class="no">1</span>
+        </div>
+  
+        <button class="btn" onclick="prev()">
+            prev
+        </button>
+  
+        <button class="btn" onclick="next()">
+            next
+        </button>
+    </div>
+  
+    <script>
+        var no_box = document
+            .querySelector('.no-box');
+              
+        var i = 1;
+  
+        function prev() {
+  
+            // Start position 
+            if (i == 1) {
+  
+                // Add disabled attribute on
+                // prev button
+                document.getElementsByClassName(
+                        'prev').disabled = true;
+  
+                // Remove disabled attribute 
+                // from next button 
+                document.getElementsByClassName(
+                        'next').disabled = false;
+            } else {
+                i--;
+                return setNo();
+            }
+        }
+  
+        function next() {
+  
+            // End position
+            if (i == 5) {
+  
+                // Add disabled attribute on 
+                // next button
+                document.getElementsByClassName(
+                        'next').disabled = true;
+  
+                // Remove disabled attribute
+                // from prev button
+                document.getElementsByClassName(
+                        'prev').disabled = false;
+            } else {
+                i++;
+                return setNo();
+            }
+        }
+  
+        function setNo() {
+  
+            // Change innerhtml
+            return no_box.innerHTML = i;
+        }
+    </script>
+</head>
+
+  <body style="background-color:powderblue;">
+
+<h1>Logicicsim, Intulisim, Formalisim</h1>
+    <p>
+      During the first half of the 20th century, the philosophy of mathematics was dominated by three views: logicism, intuitionism, and formalism. Given this, it might seem odd that none of these views has been mentioned yet. The reason is that (with the exception of certain varieties of formalism) these views are not views of the kind discussed above. 
+The views discussed above concern what the sentences of mathematics are really saying and what they are really about. But logicism and intuitionism are not views of this kind at all, and insofar as certain versions of formalism are views of this kind, they are versions of the views described above. How then should logicism, intuitionism, and formalism be characterized? In order to understand these views, it is important to understand the intellectual climate in which they were developed. During the late 19th and early 20th centuries, mathematicians and philosophers of mathematics became preoccupied with the idea of securing a firm foundation of mathematics. That is, they wanted to show that mathematics, as ordinarily practiced, was reliable or trustworthy or certain. It was in connection with this project that logicism, intuitionism, and formalism were developed.
+The desire to secure a foundation for mathematics was brought on in large part by the British philosopher Bertrand Russell’s discovery in 1901 that naive set theory contained a contradiction. It had been naively thought that for every concept, there exists a set of things that fall under that concept; for instance, corresponding to the concept “egg” is the set of all the eggs in the world. Even concepts such as “mermaid” are associated with a set—namely, the empty set. Russell noticed, however, that there is no set corresponding to the concept “not a member of itself.” For suppose that there were such a set—i.e., a set of all the sets that are not members of themselves. Call this set S. Is S a member of itself? If it is, then it is not (because all the sets in S are not members of themselves); and if S is not a member of itself, then it is (because all the sets not in S are members of themselves). Either way, a contradiction follows. Thus, there is no such set as S.
+Logicism is the view that mathematical truths are ultimately logical truths. This idea was introduced by Frege. He endorsed logicism in conjunction with Platonism, but logicism is consistent with various anti-Platonist views as well. Logicism was also endorsed at about the same time by Russell and his associate, British philosopher Alfred North Whitehead. Few people still endorse this view, although there is a neologicist school, the main proponents of which are the British philosophers Crispin Wright and Robert Hale.
+Intuitionism is the view that certain kinds of mathematical proofs (namely, nonconstructive arguments) are unacceptable. More fundamentally, intuitionism is best seen as a theory about mathematical assertion and denial. Intuitionists embrace the nonstandard view that mathematical sentences of the form “The object O has the property P” really mean that there is a proof that the object O has the property P, and they also embrace the view that mathematical sentences of the form “not-P” mean that a contradiction can be proven from P. Because intuitionists accept both of these views, they reject the traditionally accepted claim that for any mathematical sentence P, either P or not-P is true; and because of this, they reject nonconstructive proofs. Intuitionism was introduced by L.E.J. Brouwer, and it was developed by Brouwer’s student Arend Heyting and somewhat later by the British philosopher Michael Dummett. Brouwer and Heyting endorsed intuitionism in conjunction with psychologism, but Dummett did not, and the view is consistent with various nonpsychologistic views—e.g., Platonism and nominalism.
+There are a few different versions of formalism. Perhaps the simplest and most straightforward is metamathematical formalism, which holds that ordinary mathematical sentences that seem to be about things such as numbers are really about mathematical sentences and theories. In this view, “4 is even” should not be literally taken to mean that the number 4 is even but that the sentence “4 is even” follows from arithmetic axioms. Formalism can be held simultaneously with Platonism or various versions of anti-Platonism, but it is usually conjoined with nominalism. Metamathematical 
+formalism was developed by Haskell Curry, who endorsed it in conjunction with a sort of nominalism.
+Mathematical Platonism: for and against
+
+              Philosophers have come up with numerous arguments for and against Platonism, but one of the arguments for Platonism stands out above the rest, and one of the arguments against Platonism also stands out as the best. These arguments have roots in the writings of Plato, but the pro-Platonist argument was first clearly formulated by Frege, and the locus classicus of the anti-Platonist argument is a 1973 paper by the American philosopher Paul Benacerraf.
+The Fregean argument for Platonism Frege’s argument for mathematical Platonism boils down to the assertion that it is the only tenable view of mathematics. (The version of the argument presented here includes numerous points that Frege himself never made; nonetheless, the argument is still Fregean in spirit.)
+From the Platonist point of view, the weakest anti-Platonist views are psychologism, physicalism, and paraphrase nominalism. These three views make controversial claims about how the language of mathematics should be interpreted, and Platonists rebut their claims by carefully examining what people actually mean when they make mathematical utterances. The following brings out some of the arguments against these three views.
+Psychologism can be thought of as involving two central claims: (1) number-ideas exist inside people’s heads and (2) ordinary mathematical sentences and theories are best interpreted as being about these ideas. Very few people would reject the first of these theses, but there are several well-known arguments against accepting the second view. Three are presented here. First is the argument that psychologism makes mathematical truth contingent upon psychological truth. Thus, if every human being died, the sentence “2 + 2 = 4” would suddenly become untrue. This seems blatantly wrong. The second argument is that psychologism seems incompatible with standard arithmetical theory, which insists that infinitely many numbers actually exist, because clearly there are only a finite number of ideas in human heads. This is not to say that humans cannot conceive of an infinite set; the point is, rather, that infinitely many actual objects (i.e., distinct number-ideas) cannot reside in human heads. Therefore, numbers cannot be ideas in human heads. (See also infinity for Aristotle’s distinction between actual infinities and potential infinities.) Third, psychologism suggests that the proper methodology for mathematics is that of empirical psychology. If psychologism were true, then the proper way to discover whether, say, there is a prime number between 10,000,000 and 10,000,020 would be to do an empirical study of humans to ascertain whether such a number existed in someone’s head. This, however, is obviously not the proper methodology for mathematics; the proper methodology involves mathematical proof, not empirical psychology.
+Physicalism does not fare much better in the eyes of Platonists. The easiest way to bring out the arguments against physicalistic interpretations of mathematics is to focus on set theory. According to physicalism, sets are just piles of physical objects. But, as has been previously shown, sets cannot be piles of physical stuff—or at any rate, when mathematicians talk about sets, they are not talking about physical piles—because it follows from the principles of set theory that for every physical pile, there corresponds infinitely many sets. A second problem with physicalistic views is that they seem incapable of accounting for the sheer size of the infinities involved in set theory. Standard set theory holds not just that there are infinitely large sets but also that there are infinitely many sizes of infinity, that these sizes get larger and larger with no end, and that there actually exist sets of all of these different sizes of infinity. There is simply no plausible way to take this sort of mathematical theorizing about the infinite to be about the physical world. Finally, a third problem with physicalism in Platonists’ eyes is that it also seems to imply that mathematics is an empirical science, contingent on physical facts and susceptible to empirical falsification. This seems to contradict mathematical methodology; mathematics is not empirical (at least not usually), and most mathematical truths (e.g., “2 + 3 = 5”) cannot be empirically falsified by discoveries about the nature of the physical world.
+Platonists argue against the various versions of paraphrase nominalism by pointing out that they are also out of step with actual mathematical discourse. These views are all committed to implausible hypotheses about the intentions of mathematicians and ordinary folk. For instance, deductivism is committed to the thesis that when people utter sentences such as “4 is even,” what they really mean to say is that, if there were numbers, then 4 would be even. However, there simply is no evidence for this thesis, and, what is more, it seems obviously false. Similar remarks can be made about the other versions of paraphrase nominalism; all of these views involve the same idea that mathematical statements are not used literally. There is no evidence, however, that people use mathematical sentences nonliterally. It seems that the best interpretation of mathematical discourse takes it to be about (or at any rate, to purport to be about) certain kinds of objects. Furthermore, as has already been shown, there are good reasons to think that the objects in question could not be physical or mental objects. Thus, the arguments outlined here seem to lead to the Platonistic conclusion that mathematical discourse is about abstract objects.
+It does not follow from this that Platonism is true, however, because anti-Platonists can concede all these arguments and still endorse fictionalism or neo-Meinongianism. Advocates of the neo-Meinongian view accept the eminently plausible Platonistic interpretation of mathematical sentences while also denying that there are any such things as numbers and functions and sets; but then neo-Meinongians want to claim that mathematics is true anyway. Platonists argue that this reasoning is absurd. For instance, if mermaids do not exist, then the sentence “There are some mermaids with red hair” cannot be literally true. Likewise, if there are no such things as numbers, then the sentence “There are some prime numbers larger than 20” cannot be literally true either. Perhaps the best thing to say here is that neo-Meinongianism warps the meaning of the word true.
+The one remaining group of anti-Platonists, the fictionalists, agree with Platonists on how to interpret mathematical sentences. In fact, the only point on which fictionalists disagree with Platonists is the bare question of whether there exist any such things as abstract objects (and, as a result, the question about whether mathematical sentences are literally true). However, since abstract objects must be nonphysical and nonmental if they exist at all, it is not obvious how one could ever determine whether they exist. This is the beauty of the fictionalists’ view: they endorse all of the Platonists’ arguments that mathematics is best interpreted as being about abstract objects, and then they simply assert that they do not believe in abstract objects. It might seem very easy to dispense with fictionalism, because it might seem utterly obvious that sentences such as “2 + 2 = 4” are true. On closer inspection, however, this is not at all obvious. If the arguments discussed above are correct—and Platonists and fictionalists both accept them—then in order for “2 + 2 = 4” to be true, abstract objects must exist. But one might very well doubt that there really do exist such things; after all, they seem more than a bit strange, and what is more, there does not seem to be any evidence that they really exist.
+Or maybe some evidence does exist. This, at any rate, is what Platonists want to claim. Platonists have offered a few different arguments as refutations of fictionalism, but only one of them, known as the indispensability argument, has gained any real currency. According to the indispensability argument, well-established mathematical theorems must be true because they are inextricably woven into the empirical theories that have been developed and accepted in the natural sciences, and there are good reasons to think that these empirical theories are true. (This argument has roots in the work of Frege and has been developed by Quine and Putnam.) Fictionalists have offered two responses to this argument. Field has argued that mathematics is not inextricably woven into the empirical theories that scientists have developed; if scientists wanted, he has argued, they could extract mathematics from their theories. Furthermore, Balaguer, Rosen, and Yablo have argued that it does not matter whether mathematics is indispensable to empirical science because even if it is, and even if mathematical theorems are not literally true (because there are no such things as abstract objects), the empirical theories that use these mathematical theorems could still provide essentially accurate pictures of the physical world.
+    <h1>The epistemological argument against Platonism</h1>
+The epistemological argument is very simple. It is based on the idea that, according to Platonism, mathematical knowledge is knowledge of abstract objects, but there does not seem to be any way for humans to acquire knowledge of abstract objects. The argument for the claim that humans could not acquire knowledge of abstract objects proceeds as follows:
+
+   (1) Humans exist entirely within space-time.
+
+   (2) If there exist any abstract objects, then they exist entirely outside of space-time.
+
+   (3) Therefore, it seems that humans could never acquire knowledge of abstract objects.
+
+
+There are three ways for Platonists to respond to this argument. They can reject (1), they can reject (2), or they can accept (1) and (2) and explain why the very plausible sounding (3) is nonetheless false.
+Platonists who reject (1) maintain that the human mind is not entirely physical and that it is capable of somehow forging contact with abstract objects and thereby acquiring information about such objects. This strategy was pursued by Plato and Gödel. According to Plato, people have immaterial souls, and before birth their souls acquire knowledge of abstract objects, so that mathematical learning is really just a process of recollection. For Gödel, humans acquire information about abstract objects by means of a faculty of mathematical intuition—in much the same way that information about physical objects is acquired through sense perception.
+Platonists who reject (2) alter the traditional Platonic view and maintain that, although abstract objects are nonphysical and nonmental, they are still located in space-time; hence, according to this view, knowledge of abstract objects can be acquired through ordinary sense perceptions. Maddy developed this idea in connection with sets. She claimed that sets of physical objects are spatiotemporally located and that, because of this, people can perceive them—that is, see them and taste them and so on. For example, suppose that Maddy is looking at three eggs. According to her view, she can see not only the three eggs but also the set containing them. Thus, she knows that this set has three members simply by looking at it—analogous to the way that she knows that one of the eggs is white just by looking at it.
+Platonists who accept both (1) and (2) deny that humans have some sort of information-gathering contact with abstract objects in the way proposed by Plato, Gödel, and Maddy; but these Platonists still think that humans can acquire knowledge of abstract objects. One strategy that Platonists have used here is to argue that people acquire knowledge of abstract mathematical objects by acquiring evidence for the truth of their empirical scientific theories; the idea is that this evidence provides reason to believe all of empirical science, and science includes claims about mathematical objects. Another approach, developed by Resnik and Shapiro, is to claim that humans can acquire knowledge of mathematical structures by means of the faculty of pattern recognition. They claim that mathematical structures are nothing more than patterns, and humans clearly have the ability to recognize patterns.
+Another strategy, that of full-blooded Platonism, is based on the claim that Platonists ought to endorse the thesis that all the mathematical objects that possibly could exist actually do exist. According to Balaguer, if full-blooded Platonism is true, then knowledge of abstract objects can be obtained without the aid of any information-transferring contact with such objects. In particular, knowledge of abstract objects could be obtained via the following two-step method (which corresponds to the actual methodology of mathematicians): first, stipulate which mathematical structures are to be theorized about by formulating some axioms that characterize the structures of interest; and second, deduce facts about these structures by proving theorems from the given axioms.
+For example, if mathematicians want to study the sequence of nonnegative integers, they can begin with axioms that elaborate its structure. Thus, the axioms might say that there is a unique first number (namely, 0), that every number has a unique successor, that every nonzero number has a unique predecessor, and so on. Then, from these axioms, theorems can be proven—for instance, that there are infinitely many prime numbers. This is, in fact, how mathematicians actually proceed. The point here is that full-blooded Platonists can maintain that by proceeding in this way, mathematicians acquire knowledge of abstract objects without the aid of any information-transferring contact with such objects. Put differently, they maintain that what mathematicians have discovered is that, in the sequence of nonnegative integers (by which is just meant the part or parts of the mathematical realm that mathematicians have in mind when they select the standard axioms of arithmetic), there are infinitely many prime numbers. Without full-blooded Platonism this cannot be said, because traditional Platonists have no answer to the question “How do mathematicians know which axiom systems describe the mathematical realm?” In contrast, this view entails that all internally consistent axiom systems accurately describe parts of the mathematical realm. Therefore, full-blooded Platonists can say that when mathematicians lay down axiom systems, all they are doing is stipulating which parts of the mathematical realm they want to talk about. Then they can acquire knowledge of those parts simply by proving theorems from the given axioms.
+
+    <h1>Ongoing impasse</h1>
+
+Just as there is no widespread agreement that fictionalists can succeed in responding to the indispensability argument, there is no widespread agreement that Platonists can adequately respond to the epistemological argument. It seems to this writer, though, that both full-blooded Platonism and fictionalism can be successfully defended against all of the traditional arguments brought against them. Recall that Platonism and fictionalism agree on how mathematical sentences should be interpreted—that is, both views agree that mathematical sentences should be interpreted as being statements about abstract objects. On the other hand, Platonism and fictionalism disagree on the metaphysical question of whether abstract objects exist, and an examination of the foregoing debate does not provide any compelling reason to endorse or reject either view (though some reasons have proved plausible and attractive enough to persuade people to take sides on this question). In fact, humanity seems to be cut off in principle from ever knowing whether there are such things as abstract objects. Indeed, it seems to this writer that it is doubtful that a correct answer even exists. For it can be argued that the concept of an abstract object is so unclear that there is no objective, agreed-upon condition that would need to be satisfied in order for it to be true that there are abstract objects. This view of the debate is extremely controversial, however.
+If you are looking for the answer to the question “which one is best suited to fundament the entire mathematics?” I’m afraid this article can’t give it to you. But I do encourage you to work on it. In fact, to develop a good answer to the question “what the entire mathematical reasoning is about?” you will probably need to outrun the three main contemporary philosophies of mathematics: Formalism, logicism, and intuitionism. Being the three leading scientists of each: Hilbert (formalist), Frege (logicist), and Poincaré (intuitionist). Or, it's possible you will choose one of them when you finish reading this article. Let’s see.
+These three philosophies emerged shortly after Peano’s five axioms of arithmetic:
+
+“(1) zero is a number. 
+ (2) The successor of any number is a number. 
+ (3) No two numbers have the same successor. 
+ (4) zero is not the successor of any number. 
+ (5) Any property which belongs to zero, and also to the successor of every number which has the property, belongs to all numbers.” 
+    </p>
+  
+    
