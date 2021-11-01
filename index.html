@@ -6,101 +6,65 @@
 		<title>Logicism For Class 12</title>
 <!-- Logicism, Intuitionism and Formalism
 Rohith SV -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-        .container {
-            margin: 100px 400px;
-        }
-  
-        .no-box {
-            padding-left: 30px;
-            font-size: 60px;
-        }
-  
-        .btn {
-            background-color: rgb(10, 213, 245);
-        }
-  
-        .btn:hover {
-            color: white;
-            background-color: springreen;
-        }
-    </style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Cascadia Code;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #fa9dea;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #f582a6;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+#Home {background-color: #403e3e;}
+#Article {background-color: #960cf2;}
+#Contact {background-color: #0cb5f2;}
+#About {background-color: #12191a;}
+</style>
 </head>
-  
 <body>
-    <div class="container">
-        <div class="no-box">
-            <span class="no">1</span>
-        </div>
-  
-        <button class="btn" onclick="prev()">
-            prev
-        </button>
-  
-        <button class="btn" onclick="next()">
-            next
-        </button>
-    </div>
-  
-    <script>
-        var no_box = document
-            .querySelector('.no-box');
-              
-        var i = 1;
-  
-        function prev() {
-  
-            // Start position 
-            if (i == 1) {
-  
-                // Add disabled attribute on
-                // prev button
-                document.getElementsByClassName(
-                        'prev').disabled = true;
-  
-                // Remove disabled attribute 
-                // from next button 
-                document.getElementsByClassName(
-                        'next').disabled = false;
-            } else {
-                i--;
-                return setNo();
-            }
-        }
-  
-        function next() {
-  
-            // End position
-            if (i == 6) {
-  
-                // Add disabled attribute on 
-                // next button
-                document.getElementsByClassName(
-                        'next').disabled = true;
-  
-                // Remove disabled attribute
-                // from prev button
-                document.getElementsByClassName(
-                        'prev').disabled = false;
-            } else {
-                i++;
-                return setNo();
-            }
-        }
-  
-        function setNo() {
-  
-            // Change innerhtml
-            return no_box.innerHTML = i;
-        }
-    </script>
-</head>
 
-  <body style="background-color:powderblue;">
+<button class="tablink" onclick="openPage('Home', this, 'light-red')">Home</button>
+<button class="tablink" onclick="openPage('Article', this, 'grey')" id="defaultOpen">Article</button>
+<button class="tablink" onclick="openPage('Contact', this, 'skyblue')">Contact</button>
+<button class="tablink" onclick="openPage('About', this, 'grey')">About</button>
 
-<h1>Logicicsim, Intulisim, Formalisim</h1>
-	  <ul id="1">
-    <p>
+<div id="Home" class="tabcontent">
+  <h3>Home</h3>
+  <p><h2>Logicicsim, Intulisim, Formalisim<br>Is A School Project and I made A Copiable Website for You!<br> Which And Where You Can Get Idea Fors The Upcaoming Projects.<h2><br> <h1>Subscribe :)<h1> 
+ </p>
+</div>
+
+<div id="Article" class="tabcontent">
+  <h3>You Can Read My Article Here</h3>
+  <p>
       During the first half of the 20th century, the philosophy of mathematics was dominated by three views: logicism, intuitionism, and formalism. Given this, it might seem odd that none of these views has been mentioned yet. The reason is that (with the exception of certain varieties of formalism) these views are not views of the kind discussed above. 
 The views discussed above concern what the sentences of mathematics are really saying and what they are really about. But logicism and intuitionism are not views of this kind at all, and insofar as certain versions of formalism are views of this kind, they are versions of the views described above. How then should logicism, intuitionism, and formalism be characterized? In order to understand these views, it is important to understand the intellectual climate in which they were developed. During the late 19th and early 20th centuries, mathematicians and philosophers of mathematics became preoccupied with the idea of securing a firm foundation of mathematics. That is, they wanted to show that mathematics, as ordinarily practiced, was reliable or trustworthy or certain. It was in connection with this project that logicism, intuitionism, and formalism were developed.
 The desire to secure a foundation for mathematics was brought on in large part by the British philosopher Bertrand Russell’s discovery in 1901 that naive set theory contained a contradiction. It had been naively thought that for every concept, there exists a set of things that fall under that concept; for instance, corresponding to the concept “egg” is the set of all the eggs in the world. Even concepts such as “mermaid” are associated with a set—namely, the empty set. Russell noticed, however, that there is no set corresponding to the concept “not a member of itself.” For suppose that there were such a set—i.e., a set of all the sets that are not members of themselves. Call this set S. Is S a member of itself? If it is, then it is not (because all the sets in S are not members of themselves); and if S is not a member of itself, then it is (because all the sets not in S are members of themselves). Either way, a contradiction follows. Thus, there is no such set as S.
@@ -108,9 +72,8 @@ Logicism is the view that mathematical truths are ultimately logical truths. Thi
 Intuitionism is the view that certain kinds of mathematical proofs (namely, nonconstructive arguments) are unacceptable. More fundamentally, intuitionism is best seen as a theory about mathematical assertion and denial. Intuitionists embrace the nonstandard view that mathematical sentences of the form “The object O has the property P” really mean that there is a proof that the object O has the property P, and they also embrace the view that mathematical sentences of the form “not-P” mean that a contradiction can be proven from P. Because intuitionists accept both of these views, they reject the traditionally accepted claim that for any mathematical sentence P, either P or not-P is true; and because of this, they reject nonconstructive proofs. Intuitionism was introduced by L.E.J. Brouwer, and it was developed by Brouwer’s student Arend Heyting and somewhat later by the British philosopher Michael Dummett. Brouwer and Heyting endorsed intuitionism in conjunction with psychologism, but Dummett did not, and the view is consistent with various nonpsychologistic views—e.g., Platonism and nominalism.
 There are a few different versions of formalism. Perhaps the simplest and most straightforward is metamathematical formalism, which holds that ordinary mathematical sentences that seem to be about things such as numbers are really about mathematical sentences and theories. In this view, “4 is even” should not be literally taken to mean that the number 4 is even but that the sentence “4 is even” follows from arithmetic axioms. Formalism can be held simultaneously with Platonism or various versions of anti-Platonism, but it is usually conjoined with nominalism. Metamathematical 
 formalism was developed by Haskell Curry, who endorsed it in conjunction with a sort of nominalism.
-Mathematical Platonism: for and against
-
-              Philosophers have come up with numerous arguments for and against Platonism, but one of the arguments for Platonism stands out above the rest, and one of the arguments against Platonism also stands out as the best. These arguments have roots in the writings of Plato, but the pro-Platonist argument was first clearly formulated by Frege, and the locus classicus of the anti-Platonist argument is a 1973 paper by the American philosopher Paul Benacerraf.
+Mathematical Platonism: for and against 
+<br> Philosophers have come up with numerous arguments for and against Platonism, but one of the arguments for Platonism stands out above the rest, and one of the arguments against Platonism also stands out as the best. These arguments have roots in the writings of Plato, but the pro-Platonist argument was first clearly formulated by Frege, and the locus classicus of the anti-Platonist argument is a 1973 paper by the American philosopher Paul Benacerraf.
 The Fregean argument for Platonism Frege’s argument for mathematical Platonism boils down to the assertion that it is the only tenable view of mathematics. (The version of the argument presented here includes numerous points that Frege himself never made; nonetheless, the argument is still Fregean in spirit.)
 From the Platonist point of view, the weakest anti-Platonist views are psychologism, physicalism, and paraphrase nominalism. These three views make controversial claims about how the language of mathematics should be interpreted, and Platonists rebut their claims by carefully examining what people actually mean when they make mathematical utterances. The following brings out some of the arguments against these three views.
 Psychologism can be thought of as involving two central claims: (1) number-ideas exist inside people’s heads and (2) ordinary mathematical sentences and theories are best interpreted as being about these ideas. Very few people would reject the first of these theses, but there are several well-known arguments against accepting the second view. Three are presented here. First is the argument that psychologism makes mathematical truth contingent upon psychological truth. Thus, if every human being died, the sentence “2 + 2 = 4” would suddenly become untrue. This seems blatantly wrong. The second argument is that psychologism seems incompatible with standard arithmetical theory, which insists that infinitely many numbers actually exist, because clearly there are only a finite number of ideas in human heads. This is not to say that humans cannot conceive of an infinite set; the point is, rather, that infinitely many actual objects (i.e., distinct number-ideas) cannot reside in human heads. Therefore, numbers cannot be ideas in human heads. (See also infinity for Aristotle’s distinction between actual infinities and potential infinities.) Third, psychologism suggests that the proper methodology for mathematics is that of empirical psychology. If psychologism were true, then the proper way to discover whether, say, there is a prime number between 10,000,000 and 10,000,020 would be to do an empirical study of humans to ascertain whether such a number existed in someone’s head. This, however, is obviously not the proper methodology for mathematics; the proper methodology involves mathematical proof, not empirical psychology.
@@ -127,8 +90,7 @@ The epistemological argument is very simple. It is based on the idea that, accor
    (2) If there exist any abstract objects, then they exist entirely outside of space-time.
 
    (3) Therefore, it seems that humans could never acquire knowledge of abstract objects.
-	  </ul>
-   <ul id="2">
+
 There are three ways for Platonists to respond to this argument. They can reject (1), they can reject (2), or they can accept (1) and (2) and explain why the very plausible sounding (3) is nonetheless false.
 Platonists who reject (1) maintain that the human mind is not entirely physical and that it is capable of somehow forging contact with abstract objects and thereby acquiring information about such objects. This strategy was pursued by Plato and Gödel. According to Plato, people have immaterial souls, and before birth their souls acquire knowledge of abstract objects, so that mathematical learning is really just a process of recollection. For Gödel, humans acquire information about abstract objects by means of a faculty of mathematical intuition—in much the same way that information about physical objects is acquired through sense perception.
 Platonists who reject (2) alter the traditional Platonic view and maintain that, although abstract objects are nonphysical and nonmental, they are still located in space-time; hence, according to this view, knowledge of abstract objects can be acquired through ordinary sense perceptions. Maddy developed this idea in connection with sets. She claimed that sets of physical objects are spatiotemporally located and that, because of this, people can perceive them—that is, see them and taste them and so on. For example, suppose that Maddy is looking at three eggs. According to her view, she can see not only the three eggs but also the set containing them. Thus, she knows that this set has three members simply by looking at it—analogous to the way that she knows that one of the eggs is white just by looking at it.
@@ -147,7 +109,122 @@ These three philosophies emerged shortly after Peano’s five axioms of arithmet
  (3) No two numbers have the same successor. 
  (4) zero is not the successor of any number. 
  (5) Any property which belongs to zero, and also to the successor of every number which has the property, belongs to all numbers.” 
-	  </ul> 
-    </p>
+</p>
   
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h1>Contact</h1>
+  <p><h3>Get in touch, or swing by for a cup of coffee.<br>
+	  <h3>Contact - Telegram : www.telegram.me/rohithaditya<br>
+	  <h3>Gmail - rohithsreedharan2004@gmail.com<br>
+	</p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>About</h3>
+  <p><h3 align="left">😌 Something About Me:</h3>
+ 
+<kbd>▪️</kbd>🏷️ I'm Rohithaditya 😎<br>
+
+<kbd>▪️</kbd>🏘️ I am From Salem (TamilNadu) , India 🇮🇳 🏜️<br>
+
+<kbd>▪️</kbd>🎓 I am studing In Sri Vidya MAndir Sr sec school 💐<br>
+
+<kbd>▪️</kbd>🖥️ Currently Learning Python, ruby etc....🍌<br>
+
+<kbd>▪️</kbd>🔭 I'm collaborating in more private or public repositories and<br> organizations<br>
+
+<kbd>▪️</kbd>🎂 This Noob Was Borned in 11/11/2004<br>
+ 
+<h3 align="left">🔨 Languages and Tools:</h3>
+<p align="left">
+    <a href="https://www.python.org" target="_blank">
+        <img
+            src="https://img.shields.io/badge/Python-black?&style=for-the-badge&logo=python"
+        />
+    </a>
+    <a href="https://html.spec.whatwg.org/" target="_blank">
+        <img
+            src="https://img.shields.io/badge/HTML-black?&style=for-the-badge&logo=html5"
+        />
+    </a>
+    <a href="https://git-scm.com/" target="_blank">
+        <img
+            src="https://img.shields.io/badge/Git-black?&style=for-the-badge&logo=git&logoColor=red"
+        />
+    </a>
+    <a href="https://github.com/" target="_blank">
+        <img
+            src="https://img.shields.io/badge/GitHub-black?&style=for-the-badge&logo=github"
+        />
+    </a>
+    <a href="https://mongodb.com/" target="_blank">
+        <img
+            src="https://img.shields.io/badge/MongoDB-black?&style=for-the-badge&logo=mongodb"
+        />
+    </a>
+    <a href="https://daringfireball.net/projects/markdown/" target="_blank">
+        <img
+            src="https://img.shields.io/badge/Markdown-black?&style=for-the-badge&logo=markdown"
+        />
+    </a>
+    <a href="https://json.org" target="_blank">
+        <img
+            src="https://img.shields.io/badge/Json-black?&style=for-the-badge&logo=json"
+        />
+    </a>
+</p>
+
+<h3 align="left">👤 My Social Accouns:</h3>
+<p align="left">
+<div>
+    <a href="https://github.com/rohith-sreedharan">
+        <img
+            src="https://img.shields.io/badge/GitHub-black?&style=for-the-badge&logo=github"
+            alt="GitHub"
+        >
+    </a>
+    <a href="https://telegram.me/rohithaditya">
+        <img
+            src="https://img.shields.io/badge/Telegram-black?&style=for-the-badge&logo=telegram"
+            alt="Telegram"
+        >
+    </a>
+ <a href="https://twitter.com/rohithaditya">
+        <img
+            src="https://img.shields.io/badge/Twitter-black?&style=for-the-badge&logo=twitter"
+            alt="Twitter"
+        >
+</p>
+ </p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
+
+  <body style="background-color:powderblue;">
+
+<h1>Logicicsim, Intulisim, Formalisim</h1>
+	  <ul id="1">
+    
     
